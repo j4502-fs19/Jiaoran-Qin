@@ -1,79 +1,166 @@
 #container {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#nav {
-    padding: 0;
-	  list-style-type: none;
-}
-
-#nav li {
-	  border-bottom: 1px solid #F0CCCC;
-}
-
-#nav a:link, #nav a:visited {
-  display: block;
-  color: black;
-  background-color: #F0CCCC;
-  font-family: 'Roboto Condensed', sans-serif;
-  text-decoration: none;
-}
-
-#nav a:hover, #nav a:active {
-  background-color: #81FF38;
-}
-
-
-#old a:link, a:visited {
-  color: #F0696E;
-  text-decoration: none;
-}
-
-#old a:hover, a:active {
-  color: #F0696E;
-  text-decoration: underline;
-}
-
-
-#footer {
-    font-size: 0.9em;
-    border-top: 1px solid black;
-    text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr)
+  align-items: stretch;
+  grid-template-areas:
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "d d d d "
+      "e e e e ";
+  grid-gap: 20px;
 }
 
 body {
-  width:100%;
-  margin: 0 auto;
-  background-color: #F9E0FF;
+width:100%;
+margin: 0 auto;
+background-color: #F9E0FF;
 }
 
 h1 {
-  color: #DAB1FF;
-  font-family: 'Shrikhand', cursive;
-  font-size: 70px;
-  margin-bottom:-20px;
+color: #DAB1FF;
+font-family: 'Shrikhand', cursive;
+font-size: 50px;
+margin-bottom:-20px;
+grid-area: a;
 }
 
+
 h2 {
-  color: #EB9DAC;
-  font-family: 'Righteous', cursive;
-  font-size: 30px;
+color: #EB9DAC;
+font-family: 'Righteous', cursive;
+font-size: 30px;
 }
 
 h3 {
-  color: #F0997F;
-  font-family: 'Arvo', serif;
-  font-size: 25px;
+color: #F0997F;
+font-family: 'Arvo', serif;
+font-size: 25px;
 }
 
 p {
-  font-family:'Roboto Condensed', sans-serif;
-  line-height: 90%;
+font-family:'Roboto Condensed', sans-serif;
+line-height: 90%;
 }
 
 
 img {
   border: none;
+}
+
+
+#navbox {
+  background-color: #F9E0FF;
+  grid-area: b;
+}
+
+
+#nav {
+  padding: 0;
+  margin:0;
+    list-style-type: none;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+#nav li {
+  border-bottom: 1px solid #F0CCCC;
+}
+
+#nav a:link, #nav a:visited {
+display: block;
+color: black;
+background-color: #F0CCCC;
+font-family: 'Roboto Condensed', sans-serif;
+text-align:center;
+text-decoration: none;
+padding:20px;
+}
+
+#nav a:hover, #nav a:active {
+background-color: #81FF38;
+}
+
+#intro {
+  margin: 0 auto;
+  display: grid;
+  align-items: stretch;
+  grid-template-areas:
+          "ff ff"
+          "hh hh";
+  grid-gap: 20px;
+}
+
+#intro {
+  grid-area: c;
+  font-family: 'Manjari', sans-serif;
+  line-height: 1.5em;
+  font-weight: 600;
+  font-size: 16px;
+  color: #012626;
+}
+
+#tuxiang {
+  grid-area:ff;
+}
+
+#joke {
+  grid-area: hh;
+}
+
+#main {
+  font-family: 'Manjari', sans-serif;
+  line-height: 1.5em;
+  font-weight: 600;
+  font-size: 16px;
+  color: #012626;
+  grid-area: d;
+  margin: 0 auto;
+  grid-gap: 20px;
+}
+
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+      grid-template-areas:
+              "xx xx xx"
+              "yy . zz"
+              ;
+        grid-gap: 20px;
+      }
+
+  #first{
+    gird-area:xx;
+  }
+
+  #second{
+    gird-area:yy;
+  }
+
+  #third{
+    gird-area:zz;
+  }
+
+  #footer {
+    font-size: 0.9em;
+    border-top: 1px solid black;
+    text-align: center;
+    grid-area: e;
+  }
+
+#old a:link, a:visited {
+color: #F0696E;
+text-decoration: none;
+}
+
+#old a:hover, a:active {
+color: #F0696E;
 }
