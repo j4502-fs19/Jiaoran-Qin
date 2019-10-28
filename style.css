@@ -48,6 +48,7 @@ font-size: 25px;
 
 .header {
   background-color: #F9E0FF;
+  display:block;
 }
 
 img {
@@ -56,6 +57,12 @@ img {
   margin-bottom: 20px;
 }
 
+  .menu{
+  font-size: 1.75em;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
 
 #nav {
   padding: 0;
@@ -171,6 +178,10 @@ text-decoration: underline;
 
 @media screen and (min-width: 599px) {
 
+    .menu{
+    display: none;
+    }
+
     h1 {
       justify-content: center;
       font-size: 3.5em;
@@ -184,6 +195,7 @@ text-decoration: underline;
       flex-flow: row wrap;
       font-size: 1.5em;
       justify-content: space-around;
+      display:flex;
     }
 
     #nav li {
@@ -228,6 +240,9 @@ text-decoration: underline;
 
 @media screen and (min-width: 768px) {
 
+      .menu{
+      display: none;
+      }
 
     h1 {
       justify-content: center;
@@ -242,6 +257,7 @@ text-decoration: underline;
       flex-flow: row wrap;
       font-size: 1.8em;
       justify-content: space-around;
+      display:flex;
     }
 
     #nav li {
