@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $('.menu').click(function() {
+  $('.header .menu-trigger').click(function() {
     $('#nav').slideToggle(500);
   });
 
